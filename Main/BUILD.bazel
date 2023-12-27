@@ -1,0 +1,5 @@
+java_binary(
+    name = "Application",
+    srcs = ["src/main/java/ksaito/Application.java"],
+    deps = ["//Sample:Sample"],
+)

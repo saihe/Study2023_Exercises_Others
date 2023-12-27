@@ -1,0 +1,6 @@
+java_library(
+    name = "Sample",
+    visibility = ["//visibility:public"],
+    srcs = ["src/main/java/ksaito/Sample.java"],
+    deps = [],
+)
