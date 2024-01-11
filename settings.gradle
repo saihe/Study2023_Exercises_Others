@@ -19,5 +19,5 @@ plugins {
 }
 
 rootProject.name = 'Study2023'
-include('app', 'list', 'utilities', 'common', 'nakamaki')
+include('app', 'common', 'nakamaki')
 

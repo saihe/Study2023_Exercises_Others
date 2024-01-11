@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'ksaito.study2023'
+version = 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+}
+
+test {
+    useJUnitPlatform()
+}
