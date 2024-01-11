@@ -3,6 +3,9 @@
  */
 package ksaito.study2023.app;
 
+import ksaito.study2023.common.AppException;
+import ksaito.study2023.nakamaki.Omikuji;
+
 public class App {
     public static void main(String[] args) {
         if (args.length < 1) {
@@ -10,19 +13,28 @@ public class App {
             return;
         }
 
-        switch (args[0]) {
-            case "--help":
-                printHelp();
-            case "nozaki":
-                System.out.println("未実装です。");
-            case "nakamaki":
-                System.out.println("未実装です。");
-            case "murata":
-                System.out.println("未実装です。");
-            case "gohara":
-                System.out.println("未実装です。");
-            default:
-                printHelp();
+        try {
+            switch (args[0]) {
+                case "--help":
+                    printHelp();
+                    break;
+                case "nozaki":
+                    System.out.println("未実装です。");
+                    break;
+                case "nakamaki":
+                    new Omikuji().run(args);
+                    break;
+                case "murata":
+                    System.out.println("未実装です。");
+                    break;
+                case "gohara":
+                    System.out.println("未実装です。");
+                    break;
+                default:
+                    printHelp();
+            }
+        } catch (AppException e) {
+            System.out.println(e.getMessage());
         }
     }
 

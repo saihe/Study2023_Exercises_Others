@@ -14,8 +14,8 @@ compileTestJava.options.encoding = 'UTF-8'
 javadoc.options.encoding = 'UTF-8'
 
 dependencies {
-    api project(':common')
-    api project(':nakamaki')
+    implementation project(':common')
+    implementation project(':nakamaki')
 }
 
 application {
