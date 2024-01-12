@@ -1,2 +1,10 @@
+test:
+	./gradlew test
+
 build:
-	bazel build //Main:Application_deploy.jar
+	./gradlew app:shadowJar
+
+app = ""
+
+run:
+	java -jar ./app/build/libs/app-all.jar ${app}

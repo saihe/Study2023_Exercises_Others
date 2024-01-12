@@ -16,6 +16,7 @@ javadoc.options.encoding = 'UTF-8'
 dependencies {
     implementation project(':common')
     implementation project(':nakamaki')
+    implementation project(':nozaki')
 }
 
 application {

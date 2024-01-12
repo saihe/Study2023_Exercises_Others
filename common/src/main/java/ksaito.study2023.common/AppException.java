@@ -7,4 +7,12 @@ import lombok.Getter;
 @Getter
 public class AppException extends Exception {
   private int code;
+  public AppException(Throwable t) {
+    super(t);
+    this.code = 0;
+  }
+  public AppException(String message, Throwable t) {
+    super(message, t);
+    this.code = 0;
+  }
 }
