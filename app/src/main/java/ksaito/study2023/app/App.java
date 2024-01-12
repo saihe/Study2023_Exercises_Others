@@ -5,6 +5,7 @@ package ksaito.study2023.app;
 
 import ksaito.study2023.common.AppException;
 import ksaito.study2023.nakamaki.Omikuji;
+import ksaito.study2023.nozaki.IncomeAndExpenditureManagement;
 
 public class App {
     public static void main(String[] args) {
@@ -14,25 +15,14 @@ public class App {
         }
 
         try {
-            switch (args[0]) {
-                case "--help":
-                    printHelp();
-                    break;
-                case "nozaki":
-                    System.out.println("未実装です。");
-                    break;
-                case "nakamaki":
-                    new Omikuji().run(args);
-                    break;
-                case "murata":
-                    System.out.println("未実装です。");
-                    break;
-                case "gohara":
-                    System.out.println("未実装です。");
-                    break;
-                default:
-                    printHelp();
-            }
+          switch (args[0]) {
+            case "--help" -> printHelp();
+            case "nozaki" -> new IncomeAndExpenditureManagement().run(args);
+            case "nakamaki" -> new Omikuji().run(args);
+            case "murata" -> System.out.println("未実装です。");
+            case "gohara" -> System.out.println("未実装です。");
+            default -> printHelp();
+          }
         } catch (AppException e) {
             System.out.println(e.getMessage());
         }
