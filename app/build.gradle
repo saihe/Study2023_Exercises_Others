@@ -7,6 +7,8 @@
 plugins {
     id 'ksaito.study2023.java-application-conventions'
     id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'org.javamodularity.moduleplugin' version '1.8.12'
+    id 'org.gradlex.extra-java-module-info' version '1.7'
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -17,15 +19,10 @@ dependencies {
     implementation project(':common')
     implementation project(':nakamaki')
     implementation project(':nozaki')
+    implementation project(':murata')
 }
 
 application {
     // Define the main class for the application.
     mainClass = 'ksaito.study2023.app.App'
 }
-//
-//jar {
-//    manifest {
-//        attributes 'Main-Class': appMainClass
-//    }
-//}

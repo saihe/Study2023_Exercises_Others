@@ -4,6 +4,7 @@
 package ksaito.study2023.app;
 
 import ksaito.study2023.common.AppException;
+import ksaito.study2023.murata.SubscriptionManagement;
 import ksaito.study2023.nakamaki.Omikuji;
 import ksaito.study2023.nozaki.IncomeAndExpenditureManagement;
 
@@ -19,7 +20,7 @@ public class App {
             case "--help" -> printHelp();
             case "nozaki" -> new IncomeAndExpenditureManagement().run(args);
             case "nakamaki" -> new Omikuji().run(args);
-            case "murata" -> System.out.println("未実装です。");
+//            case "murata" -> new SubscriptionManagement().run(args);
             case "gohara" -> System.out.println("未実装です。");
             default -> printHelp();
           }

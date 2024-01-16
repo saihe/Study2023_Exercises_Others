@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="452.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ksaito.study2023.murata.controller.HomeController">
+  <TitledPane animated="false" collapsible="false" prefHeight="452.0" prefWidth="601.0" text="サブスク出費一覧">
+    <AnchorPane minHeight="0.0" minWidth="0.0">
+      <DatePicker fx:id="yearMonthFilter" layoutX="-8.0" layoutY="2.0" />
+      <Label fx:id="yearlyFee" layoutX="222.0" layoutY="14.0" prefHeight="17.0" prefWidth="100.0" text="年額" />
+      <Label fx:id="monthlyFee" layoutX="330.0" layoutY="14.0" prefHeight="17.0" prefWidth="108.0" text="月額" />
+      <TableView fx:id="subscriptions" editable="true" layoutY="28.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="137.0" text="サブスク名" />
+          <TableColumn fx:id="price" prefWidth="143.0" text="月額料金" />
+          <TableColumn fx:id="remarks" prefWidth="319.0" sortable="false" text="備考" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="showRegisterDialogButton" fitHeight="40.0" fitWidth="40.0" layoutX="540.0" layoutY="370.0" onMouseClicked="#showRegisterDialog" pickOnBounds="true" preserveRatio="true">
+        <Image url="@img/add-circle-svgrepo-com.png" />
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Lighting>
+                  <bumpInput>
+                     <Shadow />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant />
+                  </light>
+               </Lighting>
+            </effect>
+      </ImageView>
+    </AnchorPane>
+  </TitledPane>
+  <DialogPane fx:id="registerDialog" blendMode="SRC_ATOP" focusTraversable="true" headerText="サブスクリプション追加" layoutX="127.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="309.0">
+    <header>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="20.0" prefWidth="320.0">
+        <Label layoutX="20.0" layoutY="2.0" text="新規登録" />
+      </AnchorPane>
+    </header>
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="222.0" prefWidth="414.0">
+        <Label layoutX="16.0" layoutY="14.0" text="名称" />
+        <TextField fx:id="inputName" layoutX="14.0" layoutY="31.0" prefHeight="26.0" prefWidth="185.0" />
+        <Label layoutX="16.0" layoutY="74.0" text="金額" />
+        <TextField fx:id="inputPrice" layoutX="14.0" layoutY="91.0" prefHeight="26.0" prefWidth="185.0" />
+        <Label layoutX="16.0" layoutY="138.0" text="備考" />
+        <TextField fx:id="inputRemarks" layoutX="14.0" layoutY="155.0" prefHeight="26.0" prefWidth="185.0" />
+      </AnchorPane>
+    </content>
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+    <ButtonType fx:constant="APPLY" />
+    <ButtonType fx:constant="CANCEL" />
+  </DialogPane>
+   <Label fx:id="snackbar" disable="true" layoutX="382.0" layoutY="7.0" prefHeight="48.0" prefWidth="209.0" />
+</AnchorPane>
