@@ -31,8 +31,8 @@ application {
 }
 
 javafx {
-  version = '17.0.6'
-  modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.base', 'javafx.media', 'javafx.web']
+  version = '21.0.1'
+  modules = ['javafx.web', 'javafx.fxml']
 }
 
 dependencies {
@@ -50,8 +50,6 @@ dependencies {
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
   testImplementation platform('org.junit:junit-bom:${junitVersion}')
   testImplementation 'org.junit.jupiter:junit-jupiter'
-
-  implementation 'no.tornado:tornadofx:1.7.17'
 }
 
 test {
