@@ -1,3 +1,4 @@
+[![Test workflow](https://github.com/saihe/Study2023_Exercises_Others/actions/workflows/test.yml/badge.svg)](https://github.com/saihe/Study2023_Exercises_Others/actions/workflows/test.yml)
 # 総合演習を自分が実装したら
 
 ## 実行方法
