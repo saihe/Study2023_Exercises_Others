@@ -3,8 +3,8 @@
  */
 package ksaito.study2023.app;
 
-import ksaito.study2023.common.AppException;
-import ksaito.study2023.murata.SubscriptionManagement;
+import ksaito.study2023.common.exception.AppException;
+import ksaito.study2023.gohara.Suggest;
 import ksaito.study2023.nakamaki.Omikuji;
 import ksaito.study2023.nozaki.IncomeAndExpenditureManagement;
 
@@ -21,7 +21,7 @@ public class App {
             case "nozaki" -> new IncomeAndExpenditureManagement().run(args);
             case "nakamaki" -> new Omikuji().run(args);
 //            case "murata" -> new SubscriptionManagement().run(args);
-            case "gohara" -> System.out.println("未実装です。");
+            case "gohara" -> new Suggest().run(args);
             default -> printHelp();
           }
         } catch (AppException e) {

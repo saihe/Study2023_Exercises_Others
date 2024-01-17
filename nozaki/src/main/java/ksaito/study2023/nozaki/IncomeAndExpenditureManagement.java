@@ -5,7 +5,7 @@ import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import ksaito.study2023.common.AppException;
+import ksaito.study2023.common.exception.AppException;
 import ksaito.study2023.common.Application;
 import ksaito.study2023.nozaki.domain.model.Balance;
 import ksaito.study2023.nozaki.domain.repository.BalanceRepository;
