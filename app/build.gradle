@@ -5,10 +5,9 @@
  */
 
 plugins {
-    id 'ksaito.study2023.java-application-conventions'
-    id 'com.github.johnrengelman.shadow' version '8.1.1'
-//    id 'org.javamodularity.moduleplugin' version '1.8.12'
-//    id 'org.gradlex.extra-java-module-info' version '1.7'
+  id 'ksaito.study2023.java-application-conventions'
+  id 'com.github.johnrengelman.shadow' version '8.1.1'
+  id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -16,14 +15,20 @@ compileTestJava.options.encoding = 'UTF-8'
 javadoc.options.encoding = 'UTF-8'
 
 dependencies {
-    implementation project(':common')
-    implementation project(':nakamaki')
-    implementation project(':nozaki')
-    implementation project(':murata')
-    implementation project(':gohara')
+  implementation project(':common')
+  implementation project(':nakamaki')
+  implementation project(':nozaki')
+  implementation project(':gohara')
+  implementation project(':murata')
 }
 
 application {
-    // Define the main class for the application.
-    mainClass = 'ksaito.study2023.app.App'
+  // Define the main class for the application.
+  mainClass = 'ksaito.study2023.app.App'
 }
+
+javafx {
+  version = '21.0.1'
+  modules = ['javafx.graphics']
+}
+

@@ -19,8 +19,4 @@ public class SubscriptionManagement extends Application {
   public static void main(String[] args) {
     launch();
   }
-
-  public void run(String[] args) {
-    launch(args);
-  }
 }

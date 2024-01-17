@@ -5,6 +5,7 @@ package ksaito.study2023.app;
 
 import ksaito.study2023.common.exception.AppException;
 import ksaito.study2023.gohara.Suggest;
+import ksaito.study2023.murata.SubscriptionManagement;
 import ksaito.study2023.nakamaki.Omikuji;
 import ksaito.study2023.nozaki.IncomeAndExpenditureManagement;
 
@@ -20,7 +21,7 @@ public class App {
             case "--help" -> printHelp();
             case "nozaki" -> new IncomeAndExpenditureManagement().run(args);
             case "nakamaki" -> new Omikuji().run(args);
-//            case "murata" -> new SubscriptionManagement().run(args);
+            case "murata" -> SubscriptionManagement.main(args);
             case "gohara" -> new Suggest().run(args);
             default -> printHelp();
           }
