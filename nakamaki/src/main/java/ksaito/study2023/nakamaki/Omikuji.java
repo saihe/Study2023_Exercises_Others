@@ -1,6 +1,6 @@
 package ksaito.study2023.nakamaki;
 
-import ksaito.study2023.common.AppException;
+import ksaito.study2023.common.exception.AppException;
 import ksaito.study2023.common.Application;
 import ksaito.study2023.nakamaki.domain.Evaluation;
 import ksaito.study2023.nakamaki.domain.Fortunes;

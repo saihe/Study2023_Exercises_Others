@@ -1,4 +1,4 @@
-package ksaito.study2023.common;
+package ksaito.study2023.common.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
