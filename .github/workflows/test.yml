@@ -9,10 +9,9 @@ name: Test workflow
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    types:
+      - opened
 
 permissions:
   contents: read
