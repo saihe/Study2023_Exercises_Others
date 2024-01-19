@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  test: # WindowsPCで動かすときには環境差分がでないようにDockerコンテナ内でテストする
+    image: gradle:8.1-jdk17
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command:
+      - /app/gradlew
+      - test
