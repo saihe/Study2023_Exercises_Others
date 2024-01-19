@@ -10,19 +10,19 @@ class EvaluationTest {
   @Nested
   class SwitchByTimeMillis {
     @ParameterizedTest
-    @ValueSource(longs = {1, 2, 3})
-    void Good(long param) {
-      assertEquals(Evaluation.Good, Evaluation.switchByTimeMillis(param));
+    @ValueSource(ints = {1, 2, 3})
+    void Good(int param) {
+      assertEquals(Evaluation.Good, Evaluation.switchByIntKey(param));
     }
     @ParameterizedTest
-    @ValueSource(longs = {4, 5})
-    void Bad(long param) {
-      assertEquals(Evaluation.Bad, Evaluation.switchByTimeMillis(param));
+    @ValueSource(ints = {4, 5})
+    void Bad(int param) {
+      assertEquals(Evaluation.Bad, Evaluation.switchByIntKey(param));
     }
     @ParameterizedTest
-    @ValueSource(longs = {6, 7, 8, 9, 0})
-    void Normal(long param) {
-      assertEquals(Evaluation.Normal, Evaluation.switchByTimeMillis(param));
+    @ValueSource(ints = {6, 7, 8, 9, 0})
+    void Normal(int param) {
+      assertEquals(Evaluation.Normal, Evaluation.switchByIntKey(param));
     }
   }
 }

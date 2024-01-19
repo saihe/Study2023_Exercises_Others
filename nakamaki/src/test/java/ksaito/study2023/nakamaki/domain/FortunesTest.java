@@ -11,31 +11,31 @@ class FortunesTest {
   @Nested
   class SwitchByTimeMillis {
     @ParameterizedTest
-    @ValueSource(longs = {1, 2, 3})
-    void Highest(long param) {
-      assertEquals(Fortunes.Highest, Fortunes.switchByTimeMillis(param));
+    @ValueSource(ints = {1, 2, 3})
+    void Highest(int param) {
+      assertEquals(Fortunes.Highest, Fortunes.switchByIntKey(param));
     }
     @ParameterizedTest
-    @ValueSource(longs = {4, 5})
-    void Higher(long param) {
-      assertEquals(Fortunes.Higher, Fortunes.switchByTimeMillis(param));
+    @ValueSource(ints = {4, 5})
+    void Higher(int param) {
+      assertEquals(Fortunes.Higher, Fortunes.switchByIntKey(param));
     }
     @Test
     void High() {
-      assertEquals(Fortunes.High, Fortunes.switchByTimeMillis(6L));
+      assertEquals(Fortunes.High, Fortunes.switchByIntKey(6));
     }
     @Test
     void Low() {
-      assertEquals(Fortunes.Low, Fortunes.switchByTimeMillis(7L));
+      assertEquals(Fortunes.Low, Fortunes.switchByIntKey(7));
     }
     @Test
     void Lowest() {
-      assertEquals(Fortunes.Lowest, Fortunes.switchByTimeMillis(8L));
+      assertEquals(Fortunes.Lowest, Fortunes.switchByIntKey(8));
     }
     @ParameterizedTest
-    @ValueSource(longs = {9, 0})
-    void Normal(long param) {
-      assertEquals(Fortunes.Normal, Fortunes.switchByTimeMillis(param));
+    @ValueSource(ints = {9, 0})
+    void Normal(int param) {
+      assertEquals(Fortunes.Normal, Fortunes.switchByIntKey(param));
     }
   }
 }
