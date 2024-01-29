@@ -3,6 +3,7 @@ package ksaito.study2023.gohara.infrastructure.store;
 import ksaito.study2023.gohara.domain.model.Category;
 import ksaito.study2023.gohara.domain.model.Taste;
 import ksaito.study2023.gohara.domain.model.Type;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DishRepositoryImplTest {
   private final DishRepositoryImpl target = new DishRepositoryImpl();
+
+  @BeforeAll
+  static void init() {
+    DataStore.migrate(DataStore.sampleData());
+  }
+
   @Nested
   class Search {
     @Test

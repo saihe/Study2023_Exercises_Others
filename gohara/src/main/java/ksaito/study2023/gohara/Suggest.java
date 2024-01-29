@@ -17,6 +17,7 @@ import ksaito.study2023.gohara.domain.model.Dish;
 import ksaito.study2023.gohara.domain.model.Taste;
 import ksaito.study2023.gohara.domain.model.Type;
 import ksaito.study2023.gohara.domain.repository.DishRepository;
+import ksaito.study2023.gohara.infrastructure.store.DataStore;
 import ksaito.study2023.gohara.infrastructure.store.DishRepositoryImpl;
 
 /** 料理を提案するクラス. */
@@ -29,6 +30,7 @@ public class Suggest implements Application {
 
   @Override
   public void run(String[] args) throws AppException {
+    DataStore.migrate(DataStore.sampleData());
     System.out.print("\033[H\033[2J");
     System.out.println("【あなたが今食べたいと持っているものを当てます。】");
     System.out.println("質問に対して半角数字を入力して回答してください。");
